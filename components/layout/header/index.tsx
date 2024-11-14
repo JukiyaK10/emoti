@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { Avatar } from '@radix-ui/react-avatar';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
 
 const Header: React.FC = () => {
   return (
@@ -13,7 +17,10 @@ const Header: React.FC = () => {
 
         {/* Avatar を右端に配置 */}
         <div className="absolute right-4">
-          <Avatar/>
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+         </Avatar>
         </div>
       </div>
     </header>
