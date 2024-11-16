@@ -9,18 +9,31 @@ import {
 const Header: React.FC = () => {
   return (
     <header className="w-full py-4 bg-gray-800 text-white shadow-md">
-      <div className="container mx-auto flex justify-center items-center px-4 relative">
+      <div className="container mx-auto flex justify-between items-center px-4">
         {/* ロゴ */}
-        <Link href="/" className="flex items-center text-lg font-bold">
+        <Link href="/" className="flex items-center text-xl font-bold">
           <span>eMOTI</span>
         </Link>
 
-        {/* Avatar を右端に配置 */}
-        <div className="absolute right-4">
-          <Avatar>
+        {/* ナビゲーションメニュー */}
+        <nav className="hidden md:flex space-x-6">
+          <Link href="/dashboard" className="hover:text-gray-300 transition-colors">
+            ダッシュボード
+          </Link>
+          <Link href="/projects" className="hover:text-gray-300 transition-colors">
+            プロジェクト
+          </Link>
+          <Link href="/settings" className="hover:text-gray-300 transition-colors">
+            設定
+          </Link>
+        </nav>
+
+        {/* ユーザーアバター */}
+        <div className="flex items-center">
+          <Avatar className="cursor-pointer hover:opacity-80 transition-opacity">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
-         </Avatar>
+          </Avatar>
         </div>
       </div>
     </header>

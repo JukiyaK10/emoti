@@ -80,7 +80,7 @@ export function PostCard({ onClose, onSubmit }: PostCardProps) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           className="w-full p-2 border rounded-lg"
-          placeholder="What's on your mind?"
+          placeholder="今の気持ちを書いてみましょう"
         />
         
         <div className="mt-4 space-y-4">
@@ -161,13 +161,13 @@ export function PostCard({ onClose, onSubmit }: PostCardProps) {
             onClick={handleSubmit}
             className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
           >
-            Post
+            投稿する
           </button>
           <button
             onClick={onClose}
             className="flex-1 bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600"
           >
-            Cancel
+            キャンセル
           </button>
         </div>
       </div>
